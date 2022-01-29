@@ -2,10 +2,11 @@ import { createSlice } from '@reduxjs/toolkit'
 
 export const catSlice = createSlice({
   name: 'cats',
-  initialState: { cats: [], isLoading: false },
+  initialState: { cats: [], isLoading: false, value: 10 },
   reducers: {
-    getCatsFetch: (state) => {
+    getCatsFetch: (state, action) => {
       state.isLoading = true
+      state.value = action.payload
     },
     getCatsSuccess: (state, action) => {
       state.cats = action.payload
@@ -13,8 +14,8 @@ export const catSlice = createSlice({
     },
     getCatsFailure: (state) => {
       state.isLoading = false
-    }
-  }
+    },
+  },
 })
 
 export const { getCatsFetch, getCatsSuccess, getCatsFailure } = catSlice.actions

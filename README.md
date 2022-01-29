@@ -1,3 +1,3 @@
 # Redux-toolkit-saga
 ---
-[**DEMO**](https://github.com/Fuchih/redux-toolkit-saga.git)
+[**DEMO**](https://unruffled-borg-81603d.netlify.app)
